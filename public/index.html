@@ -2,61 +2,82 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Web Design and Development 2 - Group Project</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-   <link href="vendor/aos/aos.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
    <link rel="stylesheet" href="https://use.typekit.net/aqt4znx.css">
    <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
     <!--Hero Image-->
-    <div class="hero-image">
+    <div class="hero-image" aria-label="A man riding down a dusty slope on the G2 model">
         <div class="hero-text">
           <h1>Rocktown Bicycle and Fabrication Company</h1>
         </div>
     </div>
 
-    <!--Navigation Bar-->
-  <nav class="navbar navbar-light bg-light">
+  <!-- Nav-Bar - Sidebar -->
+  <nav class="navbar navbar-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="images/RBF_secondary.jpg" alt="RBFC secondary logo, reads RB+F" width="30" height="24" class="d-inline-block align-text-top">
-            Rockingham Bicycle and Fabrication Company
-        </a>
-        <ul class="nav">
+      <a class="navbar-brand" href="#">
+        <img src="images/logowhite4.png" alt="RBFC secondary logo, reads RB+F" width="60" height="48" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Rocktown Bicycle and Fabrication Company</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="bike_models/G1.html">G1 Model</a></li>
-                  <li><a class="dropdown-item" href="bike_models/G2.html">G2 Model</a></li>
-                  <li><a class="dropdown-item" href="bike_models/M1.html">M1 Model</a></li>
-                </ul>
+              <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Bike Models
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                <li><a class="dropdown-item" href="bike_models/M1.html">M1</a></li>
+                <li><a class="dropdown-item" href="bike_models/G1.html">G1</a></li>
+                <li><a class="dropdown-item" href="bike_models/G2.html">G2</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
             </li>
           </ul>
+        </div>
+      </div>
     </div>
   </nav>
 
     <div class="body-container" id="call-to-action" data-aos="zoom-out" data-aos-delay="200">
         <!--Call to Action card-->
-        <div class="card mb-2 text-left" style="width: 50%; background-color: black; color: white;">
+        <div class="card mb-2 text-left" id="call-text" style="width: 50%; background-color: black; color: white;">
             <div class="card-body">
-                <h5 class="card-title">Call to Action Title</h5>
-                <p class="card-text">Supporting Content</p>
+                <h5 class="card-title" style="text-align: center; font-size: xx-large; letter-spacing: 3px;">Our Products</h5>
+                <p class="card-text" style="margin: 15px;">Rocktown Bicycle and Fabrication Company's standard models are carbon fiber mountain and gravel bicycles built to order through a dealer
+                  or online and then shipped to the retailer or directly to consumers. They currently have a small model
+                  range, but are developing two new bicycles to complement their current lineup. Every bike they
+                  manufacture is built with meticulous detail, using high-end components and the best materials.</p>
+                  
+                  <p class="card-text" style="margin: 15px;">However, what sets them apart from other small bike manufacturers is that they are a true custom
+                  shop. Customers can select their frame size/configuration and RB+F will build a bicycle according to their
+                  personal measurements, riding style and specifications. RB+F will build their bike, from hand-layering
+                  the carbon fiber frame, to building custom wheel sets and using only the best component groups selected
+                  by the customer.</p>
                 <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
             </div>
         </div>
 
         <!--Image card-->
-        <div class="card mb-2" style="width: 50%; height: 100%; border-style: none;">
-            <img src="images/G1_1.png" class="card-img-top" alt="...">
+        <div class="card mb-2" id="call-image" style="width: 50%; height: 100%; border-style: none;">
+            <img src="images/G1_1.png" class="card-img-top" alt="G1 Model black bike in full" style="object-fit: cover;">
         </div>
     </div>
 
@@ -81,7 +102,7 @@
       </div>
     </div>
 
-<script src="vendor/aos/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script></body>
 </body>
 </html>

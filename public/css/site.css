@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body, html {
     height: 100%;
     background-color: #0a1d05;
@@ -9,10 +13,14 @@ body, html {
     display: flex;
 }
 
+.offcanvas{
+    background-color: black;
+}
+
 /* The hero image */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: url("../images/M1_action2.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/M1_action2.png");
 
   /* Set a specific height */
   height: 100%;
@@ -38,17 +46,20 @@ body, html {
   letter-spacing: 10px;
 }
 
-.navbar{
-    background-color: antiquewhite;
+#call-text{
+    width: 25%;
+    float: left;
+}
+
+#call-image{
+    width: 75%;
+    float: left;
+    height: auto;
 }
 
 .card{
     border-radius: 0%;
 }
-
-/*#call-to-action{
-    height: 100%;
-}*/
 
 .carousel-control-prev{
     background-color: rgba(255, 255, 255, 0);
@@ -58,4 +69,19 @@ body, html {
 .carousel-control-next{
     background-color: rgba(255, 255, 255, 0);
     border-style: none;
+}
+
+#init-about{
+    display: inline-block; 
+    width: 100%;
+}
+
+#about-text{
+    float: left;
+    height: 375px;
+}
+
+#about-loc-text{
+    float: right;
+    height: 375px;
 }
