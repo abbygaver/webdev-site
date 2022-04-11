@@ -85,3 +85,11 @@ body, html {
     float: right;
     height: 375px;
 }
+
+#M1-desc{
+    display: block;
+}
+
+#M1-elab{
+    display:flexbox;
+}
