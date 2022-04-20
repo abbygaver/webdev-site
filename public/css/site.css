@@ -6,6 +6,7 @@ body, html {
     height: 100%;
     background-color: #0a1d05;
     color:antiquewhite;
+    font-family: Myriad Pro;
 }
 
 .body-container{
@@ -92,4 +93,8 @@ body, html {
 
 #M1-elab{
     display:flexbox;
+}
+
+.col-sm-4{
+    color: #0a1d05;
 }
